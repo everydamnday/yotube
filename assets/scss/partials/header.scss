@@ -1,0 +1,54 @@
+.header {
+  background-color: $red;
+  margin-bottom: 50px;
+  .header__wrapper {
+    // wrapper 로 일단 잡아주기
+    padding: 5px 0px;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1400px;
+    display: grid; // 이거 모르니까 체크.
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center; // 수직 상 중앙정렬
+    .header__column {
+      i {
+        color: white;
+        font-size: 40px; // yotube 로고 만지기
+        margin-left: 10px;
+      }
+      &:nth-child(2) {
+        width: 100%;
+        justify-self: center; // 서치 창 중앙정렬
+      }
+      &:last-child {
+        justify-self: end; // upload, profile, 등 왼쪽정렬
+      }
+      ul {
+        display: flex;
+        color: white;
+        font-weight: 600; // 적당히 조정
+        text-transform: uppercase; // 대문자로 변경
+        li:not(:last-child) {
+          margin-right: 15px; // 박스 내 개체간 간격주기
+        }
+      }
+      form {
+        //서치창 폼
+        width: 100%;
+        input {
+          padding: 5px 10px;
+          width: 100%;
+          border-radius: 0px;
+          font-size: 14px;
+          color: $black;
+          font-weight: 600;
+          max-width: none;
+          &::placeholder {
+            font-weight: 300;
+            color: rgba(0, 0, 0, 0.7);
+          }
+        }
+      }
+    }
+  }
+}

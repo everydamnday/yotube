@@ -14,6 +14,7 @@ const app = express();
 // 설정
 app.set("view engine", "pug");
 app.use("/uploads", express.static("uploads"));
+app.use("/static", express.static("static"));
 
 //미들웨어
 app.use(function (req, res, next) {
